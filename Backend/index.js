@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 // Import Routes
 const authRoute = require('./routes/auth');
+const getEvents = require('./routes/getEvents');
 
 dotenv.config();
 
@@ -26,5 +27,6 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/api/user', authRoute);
+app.use('/api/user/events', getEvents);
 
 app.listen(3000, () => console.log("API Running!"));

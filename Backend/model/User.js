@@ -32,6 +32,10 @@ const userSchema = new mongoose.Schema({
     isVerifiedDoctor: { // TODO: check this
         type: Boolean,
         default: false
+    },
+    events: {
+        type: Array,
+        default: null
     }
 })
 
