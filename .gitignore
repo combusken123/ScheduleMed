@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 node_modules/
 /Backend/.env
-=======
-node_modules
-/Backend/.env
->>>>>>> fa499f16f30cf61eff933e751af9abe4a900216b
