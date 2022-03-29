@@ -8,11 +8,11 @@ router.get('/get', verify, (req, res) => {
     res.send(userstuffs.appointments);
 });
 
-router.post('/make', verify, (req, res) => {
+router.post('/make', verify, async(req, res) => {
     let user = User.findOne({ _id: req.user });
     
     // Validate Data
-    const { error } = registerValidation(req.body);
+    const { error } = appointmentValidation(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     // Update user

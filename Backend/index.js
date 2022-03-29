@@ -5,14 +5,10 @@ const dotenv = require('dotenv');
 
 // Import Routes
 const authRoute = require('./routes/auth');
-const getEvents = require('./routes/getEvents');
+const appointmentRoute = require('./routes/appointments');
 
 dotenv.config();
 
-// Connect to DB
-// mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
-//     console.log('Connected to DB!');
-// });
 mongoose.connect(
     process.env.DB_CONNECT,
     { useNewUrlParser: true },
@@ -27,6 +23,6 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/api/user', authRoute);
-app.use('/api/user/events', getEvents);
+app.use('/api/user/appointments', appointmentRoute);
 
 app.listen(3000, () => console.log("API Running!"));
