@@ -16,10 +16,22 @@ npm start
 
 ## Project Progress
 
+Backend:
+
  - [X] Create base for authentication
- - [ ] Add events for calendar on frontend
+ - [X] Add appointments
+ - [ ] Create userid patient addition
+ - [ ] Add patient notes and patient data
+ - [ ] Build doctor verification mechanism
+ - [ ] Design chat and video communication (backend side)
+ - [ ] Add drug and prescription functionality via API
+
+Frontend:
+
  - [ ] Add frontend login page
- - [ ] Produce main events page
+ - [ ] Produce main page <- Big one
+ - [ ] Add patient and doctor chat and video call system
+ - [ ] Main home page
  - [ ] Finish up Project 😄
 
 ## End Notes

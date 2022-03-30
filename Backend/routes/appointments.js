@@ -25,6 +25,14 @@ router.post('/make', verify, async(req, res) => {
         console.log(err);
         return res.status(500).send(err);
     }
+});
+
+router.post('/delete', verify, async(req, res) => {
+    let user = User.findOne({ _id: req.user });
+
+    let title = req.body.title;
+
+    user.appointments.find( ({ titleName }) => titleName === title);
 })
 
 module.exports = router;
