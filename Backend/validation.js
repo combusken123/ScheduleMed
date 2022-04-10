@@ -18,7 +18,7 @@ const loginValidation = data => {
     return schema.validate(data);
 };
 
-const appointmentValidation = data => {
+const doctorAppointmentValidation = data => {
     const schema = Joi.object({ 
         title: Joi.string().min(2).required(),
         patients: Joi.array().required(),
@@ -26,8 +26,19 @@ const appointmentValidation = data => {
         dateandtime: Joi.date().required()
     });
     return schema.validate(data);
-}
+};
+
+const patientAppointmentValidation = data => {
+    const schema = Joi.object({ 
+        title: Joi.string().min(2).required(),
+        doctor: Joi.string().min(2).required(),
+        location: Joi.string().min(5),
+        dateandtime: Joi.date().required()
+    });
+    return schema.validate(data);
+};
 
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
-module.exports.appointmentValidation = appointmentValidation;
+module.exports.doctorAppointmentValidation = doctorAppointmentValidation;
+module.exports.patientAppointmentValidation = patientAppointmentValidation;

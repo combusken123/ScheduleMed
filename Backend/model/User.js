@@ -35,6 +35,10 @@ const userSchema = new mongoose.Schema({
         max: 1024,
         min: 6
     },
+    doctors: {
+        type: Array,
+        default: []
+    },
     date: {
         type: Date,
         default: Date.now
@@ -45,7 +49,11 @@ const userSchema = new mongoose.Schema({
     },
     appointments: {
         type: Array,
-        default: null
+        default: []
+    },
+    notifications: {
+        type: Array,
+        default: []
     },
     userKey: {
         type: String,
